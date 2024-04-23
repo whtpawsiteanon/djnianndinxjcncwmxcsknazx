@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en, ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pawww</title>
+</head>
+<body>
+    <p>Пожалуйста, подождите.<br/>:)   идет загрузка!</p>
+<div class="spinner"></div>
+<style>
+    body {
+      cursor:wait;
+        background-color: black;
+    }
+p {
+    position: absolute;
+    color: #ffffff;
+    font-size: 30px;
+    margin: 400px 0px 0px 120px;
+    text-shadow:
+  1.2px 1.1px 2.2px rgba(255, 255, 255, 0.146),
+  2.9px 2.6px 5.3px rgba(255, 255, 255, 0.21),
+  5.5px 4.9px 10px rgba(255, 255, 255, 0.26),
+  9.8px 8.7px 17.9px rgba(255, 255, 255, 0.31),
+  18.4px 16.3px 33.4px rgba(255, 255, 255, 0.374),
+  44px 39px 80px rgba(255, 255, 255, 0.52);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.spinner {
+    position: absolute;
+   width: 88px;
+   height: 88px;
+   border-radius: 50%;
+   margin: 500px 0px 0px 250px;
+   border: 14.1px solid #474bff;
+   animation: spinner-bulqg1 0.8s infinite linear alternate,
+        spinner-oaa3wk 1.6s infinite linear;
+}
+
+@keyframes spinner-bulqg1 {
+   0% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+   }
+
+   12.5% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+   }
+
+   25% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+   }
+
+   50% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   62.5% {
+      clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   75% {
+      clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   100% {
+      clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+   }
+}
+
+@keyframes spinner-oaa3wk {
+   0% {
+      transform: scaleY(1) rotate(0deg);
+   }
+
+   49.99% {
+      transform: scaleY(1) rotate(135deg);
+   }
+
+   50% {
+      transform: scaleY(-1) rotate(0deg);
+   }
+
+   100% {
+      transform: scaleY(-1) rotate(-135deg);
+   }
+}
+</style>
+    <script>
+        var delay = 3500; /* 1 миллисекунда*/
+    setTimeout(function(){ window.location = "clicker.html"; }, delay);
+    </script>
+</body>
+</html>
