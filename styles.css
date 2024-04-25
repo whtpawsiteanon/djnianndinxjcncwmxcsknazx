@@ -1,5 +1,5 @@
 body {
-    background-color: #061900;
+    background-color: #061900 ;
     background-size: 100%;
     touch-action: none;
     overflow: hidden;
@@ -195,7 +195,7 @@ body {
     color: #cccccc;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 54px 0px 0px 122gvbg  px;
+    margin: 55px 0px 0px 122px;
     position: absolute;
 }
 
@@ -211,7 +211,7 @@ body {
     background-image: url('coin.PNG');
     background-size: cover;
     touch-action: manipulation;
-    margin: 55px 0px 0px 75px;
+    margin: 52px 0px 0px 85px;
     
 }
 
