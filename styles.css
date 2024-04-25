@@ -18,10 +18,11 @@ body {
     background-size: cover;
     touch-action: manipulation;
     background-color: #000;
+    user-select: none;
 }
 
 .imag:hover {
-    opacity: 0.8;
+    opacity: 0.95;
   }
   
 .imag:active {
@@ -115,6 +116,7 @@ body {
     border-radius: 10px;
     border:1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 40px;
+    user-select: none;
 }
 
 /* БАЛАНС В КЛИКЕРЕ */
