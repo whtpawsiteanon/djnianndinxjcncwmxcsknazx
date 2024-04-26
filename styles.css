@@ -231,3 +231,15 @@ body {
     touch-action: manipulation;
     margin: 10px 0px 0px 10px;
 }
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+}
+    100% {
+      transform: translateX(0);
+}
+}
+  
+.myText {
+    animation: slide-in 0.1s forwards;
+}
