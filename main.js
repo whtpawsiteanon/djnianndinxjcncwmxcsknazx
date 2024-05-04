@@ -1,12 +1,23 @@
-let click = document.querySelector('#clicks')
+let click = document.querySelector('.click-cost')
+let parsedClick = parseFloat(click.innerHTML)
+
+let clickerCost = document.querySelector('.clicker-cost')
+let parsedClickerCost = parseFloat(clickerCost.innerHTML)
 
 function incrementClick() {
-    click.innerHTML = parseFloat(click.innerHTML) + 1
+    parsedClick += 1
+    click.innerHTML = parsedClick
 }
 
-document.getElementById('myButton').addEventListener('click', function() {
-    document.getElementById('myText').style.display = 'block';
-    setTimeout(function() {
-      document.getElementById('myText').style.display = 'none';
-    }, 300);
-});
+function buyClicker() {
+    if (parsedClick >= parsedClickerCost) {
+        parsedClick -= parsedClickerCost
+        click.innerHTML = parsedClick
+    }
+}
+
+function saveMain() {
+    localStorage.setItem('counter', parseInt(counter));
+}
+
+setInterval(saveMain, 1000);
