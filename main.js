@@ -1,23 +1,51 @@
-let click = document.querySelector('.click-cost')
-let parsedClick = parseFloat(click.innerHTML)
+let clicks = 0;
+let autoSaveInterval;
 
-let clickerCost = document.querySelector('.clicker-cost')
-let parsedClickerCost = parseFloat(clickerCost.innerHTML)
-
-function incrementClick() {
-    parsedClick += 1
-    click.innerHTML = parsedClick
+// Load saved clicks from localStorage
+if (localStorage.getItem('clicks')) {
+    clicks = parseInt(localStorage.getItem('clicks'));
+    document.getElementById('clicks').innerText = clicks;
 }
 
-function buyClicker() {
-    if (parsedClick >= parsedClickerCost) {
-        parsedClick -= parsedClickerCost
-        click.innerHTML = parsedClick
-    }
-}
+// Auto-save clicks every 10 seconds
+autoSaveInterval = setInterval(() => {
+    localStorage.setItem('clicks', clicks);
+}, 100);
 
-function saveMain() {
-    localStorage.setItem('counter', parseInt(counter));
-}
+// Add event listeners
+document.getElementById('clicker').addEventListener('click', () => {
+    clicks++;
+    document.getElementById('clicks').innerText = clicks;
+});
 
-setInterval(saveMain, 1000);
+document.getElementById('add-button').addEventListener('click', () => {
+    clicks += 50000;
+    document.getElementById('clicks').innerText = clicks;
+});
+
+// boosts
+document.getElementById('boostsvsp').addEventListener('click', function() {
+  document.getElementById('boostsmen').style.display = "block";
+});
+
+document.querySelector('.c').addEventListener('click', function() {
+  document.getElementById('boostsmen').style.display = "none";
+});
+
+// tasks
+document.getElementById('tasksvsp').addEventListener('click', function() {
+  document.getElementById('tasksmen').style.display = "block";
+});
+
+document.querySelector('.c').addEventListener('click', function() {
+  document.getElementById('tasksmen').style.display = "none";
+});
+
+// info
+document.getElementById('infovsp').addEventListener('click', function() {
+  document.getElementById('infomen').style.display = "block";
+});
+
+document.querySelector('.c').addEventListener('click', function() {
+  document.getElementById('infomen').style.display = "none";
+});
