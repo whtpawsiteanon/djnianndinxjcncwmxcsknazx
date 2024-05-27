@@ -7,7 +7,7 @@ if (/Mobi/.test(navigator.userAgent)) {
   // Ничего не делаем, так как вход разрешен
 } else {
   // Если пользовательский агент не содержит "Mobi", то это не мобильное устройство
-  // window.location.href = 'dekstop.html';
+  window.location.href = 'dekstop.html';
   alert("Вход возможен только с телефона");
   // Вы можете также перенаправить пользователя на другую страницу или выполнить другие действия
 }
@@ -22,24 +22,6 @@ if (/Mobi/.test(navigator.userAgent)) {
 // autoSaveInterval = setInterval(() => {
 //     localStorage.setItem('clicks', clicks);
 // }, 100);
-
-const backButton = Telegram.WebApp.BackButton;
-
-    // Показывать кнопку только если есть GET параметры 
-// Показывать кнопку только если есть параметры 
-// и страница не главная
-if (window.location.search && window.location.pathname !== '/') {
-
-  backButton.show();
-
-} else {
-
-  backButton.hide(); 
-
-}
-backButton.onClick(() => {
-      history.back();
-    });
 
 // Add event listeners
 document.getElementById('clicker').addEventListener('click', () => {
