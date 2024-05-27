@@ -1,5 +1,5 @@
 body {
-    background-color: #061900 ;
+    background-color: #061401 ;
     background-size: 100%;
     touch-action: none;
     overflow: hidden;
@@ -16,27 +16,14 @@ body {
     padding: 150px 150px;
     border: none;
     border-radius: 100%;
-    cursor: pointer;
     margin: 230px 0px 0px 40px;
     position: absolute;
     background-image: url('coin.PNG');
     background-size: cover;
     background-color: #000;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-name: rotate;
 }
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .imag:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
     opacity: 0.9;
 }
 
@@ -44,10 +31,10 @@ body {
 .boostsmenu {
     position: absolute;
     margin: 10px 0px 0px 10px;
-    height: 650px;
-    width: 350px;
-    background: rgba(227, 240, 228, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    height: 698px;
+    width: 95%;
+    background: rgba(58, 94, 61, 0.671);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.932);
     backdrop-filter: blur( 4.5px );
     -webkit-backdrop-filter: blur( 4.5px );
     border-radius: 10px;
@@ -55,20 +42,46 @@ body {
     border-radius: 30px;
     z-index: 1;
     display: none;
+    animation-name: menu;
+    animation-duration: 0.5s;
+}
+@keyframes menu {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* МЕНЮ ПОКУПКИ */
+.pokupmen {
+    position: absolute;
+    margin: 10px 0px 0px 10px;
+    padding: 50px 50px;
+    background-color: #000;
+    display: none;
 }
 
 /* ТЕКСТ АВТОБОТ */
 .textab {
     color: #fff;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 20px 0px 0px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 0px 0px;
     font-size: 25px;
+    position: absolute;
+}
+
+.textab span {
+    position: absolute;
+    font-size: 45px;
+    margin: 30px ;
 }
 
 .smilebot {
     position: absolute;
-    font-size: 50px;
-    margin: 10px 0px 0px 10px;
+    font-size: 40px;
+    margin: 10px 0px 0px 15px;
 }
 
 .c {
@@ -77,13 +90,9 @@ body {
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 30px;
-    cursor: pointer;
 }
 
 .ctext {
@@ -95,22 +104,17 @@ body {
     text-decoration-line: none;
 }
 
-/* БАЛАНС В АВТОБОТЕ */
+/* БАЛАНС В BOOSTS */
 .clicks1 {
     color: #fff;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 30px 0px 0px 100px;
 }
 
-.clicks1 span {
-    margin: 0px 0px 100px 0px;
-}
-
-/* АВТОБОТ */
-.autobot {
-    position: absolute;
-    margin: 50px 0px 0px 15px;
-    height: 90px;
+/* AUTOBOT, MULTITAP */
+.menuam {
+    margin: 20px 0px 0px 15px;
+    height: 80px;
     width: 320px;
     background: rgba(0, 0, 0, 0.3);
     box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
@@ -118,24 +122,7 @@ body {
     -webkit-backdrop-filter: blur( 4.5px );
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 40px;
-    cursor: pointer;
-}
-
-/* MULTITAP */
-.multitap {
-    position: absolute;
-    margin: 170px 0px 0px 15px;
-    height: 90px;
-    width: 320px;
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 40px;
-    cursor: pointer;
+    border-radius: 35px;
 }
 
 /* Меню с бустами клаим и инфо */
@@ -145,7 +132,7 @@ body {
     margin: 600px 0px 0px 5px;
     height: 110px;
     width: 95%;
-    background: rgba(190, 243, 199, 0.3);
+    background: rgba(151, 151, 151, 0.3);
     box-shadow: 0 8px 32px 0 rgba(71, 56, 12, 0.37);
     backdrop-filter: blur( 2.5px );
     -webkit-backdrop-filter: blur( 2.5px );
@@ -153,47 +140,35 @@ body {
     border:1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 40px;
     user-select: none;
-    cursor: pointer;
 }
 
 /* БАЛАНС В КЛИКЕРЕ */
 .click-cost {
-    position: absolute;
-    margin: 100px 0px 0px 39%;
     color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
 }
 
 .boosts {
-    position: absolute;
     height: 110px;
     width: 110px;
-    transition: width 0.1s, height 0.1s;
-    margin-left:10px;
+    margin: 0px 0px 0px 4%;
 }
 
 .claim {
-    position: absolute;
     height: 110px;
     width: 110px;
-    transition: width 0.1s, height 0.1s;
-    margin-left: 125px;
 }
 
 .info {
-    position: absolute;
     height: 110px;
     width: 110px;
-    transition: width 0.1s, height 0.1s;
-    margin-left: 240px;
 }
-
 
 /*ТЕКСТ КЛАИМ*/
 .textc {
     color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 30px 0px 0px 75px;
     font-size: 30px;
 }
@@ -211,7 +186,6 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 40px;
-    cursor: pointer;
 }
 
 .a {
@@ -245,7 +219,6 @@ body {
     background-color: #000;
     border: none;
     border-radius: 100%;
-    cursor: pointer;
     position: absolute;
     background-image: url('coin.PNG');
     background-size: cover;
@@ -260,74 +233,8 @@ body {
     background-color: #000;
     border: none;
     border-radius: 100%;
-    cursor: pointer;
     position: absolute;
     background-image: url('whiteeoriginal.PNG');
-    background-size: cover;
-    touch-action: manipulation;
-    margin: 10px 0px 0px 10px;
-}
-
-@keyframes slide-in {
-    0% {
-      transform: translateX(-100%);
-}
-    100% {
-      transform: translateX(0);
-}
-}
-  
-.myText {
-    animation: slide-in 0.1s forwards;
-}
-
-.iq {
-    color: #cccccc;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 55px 0px 0px 122px;
-    position: absolute;
-}
-
-.imag4 {
-    width: 30px;
-    height: 30px;
-    background-color: #000;
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
-    position: absolute;
-    background-image: url('coin.PNG');
-    background-size: cover;
-    touch-action: manipulation;
-    margin: 52px 0px 0px 85px;
-}
-
-.w {
-    color: #64c574;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 25px 0px 0px 235px;
-    position: absolute;
-}
-
-.q {
-    color: #fff;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 15px 0px 0px 85px;
-    position: absolute;
-}
-
-.imag5 {
-    width: 70px;
-    height: 70px;
-    background-color: #000;
-    border: none;
-    border-radius: 100%;
-    cursor: pointer;
-    position: absolute;
-    background-image: url('bck.jpg');
     background-size: cover;
     touch-action: manipulation;
     margin: 10px 0px 0px 10px;
@@ -345,5 +252,78 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 40px;
-    cursor: pointer;
+}
+
+.podt {
+    margin: 120px 0px 0px 5%;
+    width: 90%;
+    height: 420px;
+    position: absolute;
+    z-index: 9;
+    background: rgba(25, 27, 25, 0.63);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.945);
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 21, 0.18);
+    border-radius: 40px;
+    display: none;
+    animation-name: menu;
+    animation-duration: 0.5s;
+}
+
+.sub-podt {
+    margin: 80px 0px 0px 30px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+.sub-wh {
+    margin: 20px 0px 0px 20%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5% 10%;
+    border: none;
+    border-radius: 10px;
+    background-color: #061900;
+    color: #64c574;
+}
+
+.sub-wh:hover {
+    color: #061900;
+    background-color: #64c574;
+}
+
+.prov-wh {
+    z-index: 999999999999;
+    margin: 20px 0px 0px 20%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%2%;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    color: #061900;
+    background-color: #64c574;
+    text-decoration-line: underline;
+}
+
+.prov-wh:hover {
+    background-color: #061900;
+    color: #64c574;
+}
+
+.cc {
+    background-color: rgba(47, 255, 47, 0.356);
+    position: absolute; 
+    margin: 20px 20px;
+    z-index: 99999999;
+    position: absolute;
+    margin: 20px 0px 0px 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 30px;
 }
