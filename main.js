@@ -49,22 +49,19 @@ if (/Mobi/.test(navigator.userAgent)) {
   // Вы можете также перенаправить пользователя на другую страницу или выполнить другие действия
 }
 
-// Load saved clicks from localStorage
-// if (localStorage.getItem('clicks')) {
-//     clicks = parseInt(localStorage.getItem('clicks'));
-//     document.getElementById('clicks').innerText = clicks;
-// }
-
-// // Auto-save clicks every 10 seconds
-// autoSaveInterval = setInterval(() => {
-//     localStorage.setItem('clicks', clicks);
-// }, 100);
 
 // Add event listeners
 document.getElementById('clicker', 'clicker2', 'clicker3', 'clicker4').addEventListener('click', () => {
     clicks++;
     document.getElementById('clicks').innerText = clicks;
 });
+
+// Вибрация при нажатии на кнопку
+document.getElementById('clicker').addEventListener('click', () => {
+  window.navigator.vibrate(50); // Вибрация на 50 миллисекунд
+});
+
+
 
 // boosts
 document.getElementById('boostsvsp').addEventListener('click', function() {
@@ -93,4 +90,15 @@ document.getElementById('cc').addEventListener('click', function() {
   document.getElementById('podt').style.display = "none";
 });
 
-clicker.onclick = e => navigator.vibrate(200);
+
+
+// Load saved clicks from localStorage
+// if (localStorage.getItem('clicks')) {
+//     clicks = parseInt(localStorage.getItem('clicks'));
+//     document.getElementById('clicks').innerText = clicks;
+// }
+
+// // Auto-save clicks every 10 seconds
+// autoSaveInterval = setInterval(() => {
+//     localStorage.setItem('clicks', clicks);
+// }, 100);
